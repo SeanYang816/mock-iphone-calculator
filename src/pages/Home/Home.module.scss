@@ -1,3 +1,29 @@
 .container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 32rem;
+    height: 55rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.display {
+    color: white;
+    width: 100%;
+    text-align: right;
+    padding: 1rem 1.5rem;
+    font-size: 6rem;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1.5rem 3rem 1.5rem;
 }

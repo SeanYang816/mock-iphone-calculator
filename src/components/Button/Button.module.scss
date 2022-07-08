@@ -1,0 +1,59 @@
+$length: 6.5rem;
+
+.button {
+    width: $length;
+    height: $length;
+    border-radius: $length;
+    margin: 0.5rem;
+    transition: 0.5s;
+    font-size: calc(#{$length} / 2.5);
+
+    &[data-position^=top] {
+        margin-top: 0;
+    }
+
+    &[data-position$=right] {
+        margin-right: 0;
+    }
+
+    &[data-position^=bottom] {
+        margin-bottom: 0;
+    }
+
+    &[data-position$=left] {
+        margin-left: 0;
+    }
+}
+
+.doubleSpace {
+    width: 14rem;
+    border-radius: 5rem;
+}
+
+.light {
+    color: black;
+    background-color: lightgrey;
+
+    &:active {
+        background-color: whitesmoke;
+    }
+}
+
+.dark {
+    color: white;
+    background-color: #4c4c4c;
+
+    &:active {
+        background-color: #8a8a8a;
+    }
+}
+
+.bright {
+    color: white;
+    background-color: orange;
+
+    &:active {
+        color: #333;
+        background-color: white;
+    }
+}
