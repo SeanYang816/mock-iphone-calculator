@@ -3,20 +3,21 @@ import styles from './Button.module.scss'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-const convertUnicode = (input) => {
-    return input.replace(/\\u[0-9a-fA-F]{4}/g,function(a,b) {
-      var charcode = parseInt(b,16);
-      return String.fromCharCode(charcode);
-    });
-  }
-  
 const Button = props => {
-    const { label, value, type, theme, position, doubleSpace} = props
-  return (
-    <button className={classNames(styles.button, styles[theme], doubleSpace && styles.doubleSpace)} data-position={position}>
-        {`${value}`}
+    const { label, value, type, theme, position, doubleSpace, onClick, active } = props
+    return (
+        <button id={label} className={
+            classNames(
+                styles.button,
+                styles[theme],
+                doubleSpace && styles.doubleSpace,
+                active && styles.active,
+                )}
+            data-position={position}
+            onClick={onClick(type, value)}>
+            {`${value}`}
         </button>
-  )
+    )
 }
 
 Button.propTypes = {}

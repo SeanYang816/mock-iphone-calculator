@@ -34,7 +34,8 @@ $length: 6.5rem;
     color: black;
     background-color: lightgrey;
 
-    &:active {
+    &:active,
+    &.active {
         background-color: whitesmoke;
     }
 }
@@ -43,7 +44,8 @@ $length: 6.5rem;
     color: white;
     background-color: #4c4c4c;
 
-    &:active {
+    &:active,
+    &.active {
         background-color: #8a8a8a;
     }
 }
@@ -52,7 +54,8 @@ $length: 6.5rem;
     color: white;
     background-color: orange;
 
-    &:active {
+    &:active,
+    &.active {
         color: #333;
         background-color: white;
     }
